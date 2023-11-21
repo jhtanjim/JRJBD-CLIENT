@@ -5,11 +5,11 @@ const Header = () => {
 
 
     const navItems = <>
-        <li className='text-2xl'><Link to='/'>Home</Link></li>
-        <li className='text-2xl'><Link to='/about'>About</Link> </li>
-        <li className='text-2xl'><Link to='/bookings'>Service</Link> </li>
-        <li className='text-2xl'><Link to='/bookings'>Project</Link> </li>
-        <li className='text-2xl'><Link to='/bookings'>Contact</Link> </li>
+        <li className='text-xl'><Link to='/'>Home</Link></li>
+        <li className='text-xl'><Link to='/about'>About</Link> </li>
+        <li className='text-xl'><Link to='/bookings'>Service</Link> </li>
+        <li className='text-xl'><Link to='/bookings'>Project</Link> </li>
+        <li className='text-xl'><Link to='/bookings'>Contact</Link> </li>
 
 
 
