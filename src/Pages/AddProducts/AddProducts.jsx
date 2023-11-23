@@ -33,17 +33,19 @@ const AddProducts = () => {
 
       
       <div className="mb-4">
-        <label htmlFor="boat-size" className="block text-sm font-medium text-gray-600">
-          Boat Size
-        </label>
-        <input
-          type="text"
-          id="boat-size"
-          name="boat-size"
-          className="mt-1 p-2 border rounded-md w-full"
-          {...register('boatSize')}
-        />
-      </div>
+            <label htmlFor="category" className="block text-sm font-medium text-gray-600">
+              Product Type
+            </label>
+            <select
+              id="category"
+              name="category"
+              className="mt-1 p-2 border rounded-md w-full"
+              {...register('category')}
+            >
+              <option value="boat">Boat</option>
+              <option value="engine">Engine</option>
+            </select>
+          </div>
 
       {/* ... Repeat for other form fields ... */}
 
