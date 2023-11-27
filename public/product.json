@@ -1,0 +1,60 @@
+[
+  {
+    "category": "boat",
+    "boat_size": 8,
+    "hall_material": "Fiberglass",
+    "customize_by": "Teak Wood",
+    "profile-img": "",
+    "image": {
+      "img1": "",
+      "img2": "",
+      "img3": "",
+      "img4": ""
+    },
+    "engine": {
+      "model": "Yanmar 3JH30A",
+      "hp": 30,
+      "rpm": 2900,
+      "foundation": "inboard system"
+    },
+    "Cooling system": " water cool. Air and water exhaust.",
+    "Boat Edge": " wooden.",
+    "Sun bed": "  1.5M",
+    "Rear Deck": "  1.0M",
+    "Seat system": "  Full Boat Round Seat.",
+    "Engine box": " Made by Fiberglass on top of Wooden door.",
+    "Control Board": " made by Polyester.",
+    "Steering": "  Stainless steel round shape steering.",
+    "Rudder": "  Standard rudder system control by steering Wheel.",
+    "Water pump": "  Automatic bilge pump.",
+
+    "boxes": "2 boxes under the seat 1 box under the sun bed 1 box under the Rear Deck",
+    "Fuel_system": "fuel tank capacity 70/80 litters, fit under the Rear Deck.",
+    "Paint": "Standard.",
+    "Burnish": " High quality wooden burnish Waterproof safety Polish."
+  },
+  {
+    "category": "engine",
+    "source": "Ship Lifeboat",
+    "status": "Service, Test Run and cleaned",
+    "location": "Chittagong workshop",
+    "availability": "Available in stock",
+    "export": "We can export all over the country",
+    "profile-img": "",
+      "img1": "",
+      "img2": "",
+      "img3": "",
+      "img4": "",
+    "specification": {
+      "builder": "Bukh",
+      "model": "DV24",
+      "rpm": 3200,
+      "started": "Hand & Electric both",
+      "fuel_type": "Diesel"
+    }
+  },
+  {
+
+
+  }
+]
