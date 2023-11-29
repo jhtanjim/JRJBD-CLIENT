@@ -1,0 +1,67 @@
+[{
+    "category": "boat",
+    "boat_size": 8,
+    "hall_material": "Fiberglass",
+    "customize_by": "Teak Wood",
+    "profile-img": "",
+    "image": {
+      "img1": "",
+      "img2": "",
+      "img3": "",
+      "img4": ""
+    },
+    "engine": {
+      "model": "Yanmar 3JH30A",
+      "hp": 30,
+      "rpm": 2900,
+      "foundation": "inboard system"
+    },
+    "cooling_system": "water cool",
+    "air_and_water_exhaust": true,
+    "boat_edge": "wooden",
+    "sun_bed": 1.5,
+    "rear_deck": 1.0,
+    "seat_system": "Full Boat Round Seat",
+    "engine_box": "Made by Fiberglass on top of Wooden door",
+    "control_board": "made by Polyester",
+    "steering": "Stainless steel round shape steering",
+    "rudder": "Standard rudder system control by steering Wheel",
+    "water_pump": "Automatic bilge pump",
+    "boxes": [
+      "2 boxes under the seat",
+      "1 box under the sun bed",
+      "1 box under the Rear Deck"
+    ],
+    "fuel_system": {
+      "fuel_tank_capacity": 70,
+      "fit_under": "Rear Deck"
+    },
+    "paint": "Standard",
+    "burnish": "High quality wooden burnish Waterproof safety Polish",
+    "bukh_dv24": "Two cylinder lifeboat marine diesel engine including Gearbox with control panel & Loom"
+  },
+  {
+    "category": "engine",
+    "engine": {
+      "source": "Ship Lifeboat",
+      "status": "Service, Test Run and cleaned",
+      "location": "Chittagong workshop",
+      "availability": "Available in stock",
+      "export": "We can export all over the country"
+    },
+    "profile-img": "",
+    "image": {
+      "img1": "",
+      "img2": "",
+      "img3": "",
+      "img4": ""
+    },
+    "specification": {
+      "builder": "Bukh",
+      "model": "DV24",
+      "rpm": 3200,
+      "started": "Hand & Electric both",
+      "fuel_type": "Diesel"
+    }
+  }
+]
