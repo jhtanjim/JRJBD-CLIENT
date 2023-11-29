@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
 
 const BoatForm = () => {
     const { register, handleSubmit } = useForm();
@@ -22,6 +23,7 @@ const BoatForm = () => {
         if (response.ok) {
           const responseData = await response.json();
           // Handle the response data as needed
+          toast.success("successfully added")
           console.log("Response from server:", responseData);
         } else {
           // If the request was not successful, handle the error

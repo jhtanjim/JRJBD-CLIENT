@@ -1,5 +1,6 @@
 import React from "react";
 import { Controller, useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 
 const EngineForm = () => {
   const { register, handleSubmit, control } = useForm();
@@ -32,6 +33,7 @@ const EngineForm = () => {
       // Check if the request was successful (status code 2xx)
       if (response.ok) {
         const responseData = await response.json();
+        toast.success("successfully added")
         // Handle the response data as needed
         console.log("Response from server:", responseData);
       } else {
@@ -179,8 +181,8 @@ const EngineForm = () => {
       "started": "Hand & Electric both",
       "fuel_type": "Diesel"
     }*/}
-    
-        {/* <div>
+
+        <div>
           <label>
             Specification (e.g., builder: Bukh, model: DV24, rpm: 3200, started:
             Hand & Electric both, fuel_type: Diesel):
@@ -210,7 +212,15 @@ const EngineForm = () => {
               />
             )}
           />
-        </div> */}
+        </div>
+        <div className="mt-6">
+                <button
+                  type="submit"
+                  className="bg-blue-500 text-white px-4 py-2 rounded-md"
+                >
+                  Submit
+                </button>
+              </div>
       </form>
     </div>
   );
