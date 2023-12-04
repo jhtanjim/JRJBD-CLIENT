@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../assets/logo.svg'
+import { AuthContext } from '../../../provider/AuthProvider';
 const Header = () => {
-
+    const {user, logout} = useContext(AuthContext)
 
     const navItems = <>
         <li className='text-xl'><Link to='/'>Home</Link></li>
@@ -10,9 +11,7 @@ const Header = () => {
         <li className='text-xl'><Link to='/bookings'>Service</Link> </li>
         <li className='text-xl'><Link to='/bookings'>Project</Link> </li>
         <li className='text-xl'><Link to='/bookings'>Contact</Link> </li>
-
-
-
+        <li className='text-xl'><Link to='/addProducts'>Add Products</Link></li>
     </>
 
     return (
@@ -37,7 +36,10 @@ const Header = () => {
                         {navItems}
                     </ul>
                 </div>
-                <div className="navbar-end">
+                <div className="navbar-end gap-3">
+                    {
+                        user ? <Link onClick={logout} className='btn btn-outline btn-primary' >Logout</Link>:<Link to="login" className='btn btn-outline btn-primary' >Login</Link>
+                    }
                     <button className="btn btn-outline btn-primary">Appointment</button>
                 </div>
             </div>
