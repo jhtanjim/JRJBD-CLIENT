@@ -6,6 +6,7 @@ import AddProducts from "../Pages/AddProducts/AddProducts.jsx";
 import Login from "../Pages/Login/Login.jsx";
 import Registration from "../Pages/Login/Registration.jsx";
 import PrivateRoute from "./PrivateRoute.jsx";
+import Users from "../Pages/Shared/Users/Users.jsx";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "/addProducts",
         element: <PrivateRoute><AddProducts></AddProducts></PrivateRoute>,
+      },
+      {
+        path: "/users",
+        element: <Users></Users>,
       }
     ],
   },

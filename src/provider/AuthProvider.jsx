@@ -8,9 +8,11 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
+  updateProfile,
 } from "firebase/auth";
-import toast from "react-hot-toast";
-export const AuthContext = createContext();
+import axios from "axios";
+// import axios from "axios";
+export const AuthContext = createContext(null);
 const auth = getAuth(app);
 
 
@@ -18,39 +20,49 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  const googleProvider = new GoogleAuthProvider();
+
   const createUser = (email, password) => {
     setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
-  const login = (email, password) => {
+  const signIn = (email, password) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
-  const googleProvider = new GoogleAuthProvider();
-
-  const logInWithGoogle = () => {
-    signInWithPopup(auth, googleProvider)
-      .then((result) => {
-        const loggedInUser = result.user;
-        // console.log(loggedInUser)
-        setUser(loggedInUser);
-      })
-      .catch((error) => console.log(error.message));
-  };
-
-  const logout = (email, password) => {
+  const googleSignIn = () => {
     setLoading(true);
-    signOut(auth);
-    return toast.success("Logged out your account")
-
+    return signInWithPopup(auth, googleProvider)
   };
+
+  const logout = () => {
+    setLoading(true);
+    return signOut(auth);
+  };
+
+
+  const updateUserProfile = (name, photo) => {
+    return updateProfile(auth.currentUser, {
+      displayName: name,
+      photoURL: photo,
+    });
+  };
+
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (loggedUser) => {
-      setUser(loggedUser);
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
       setLoading(false);
+      if (currentUser) {
+        axios.post("http://localhost:5000/users", {
+          email: currentUser.email
+        }).then((error) => {
+          console.log(error);
+          setLoading(false);
+        });
+      }
     });
     return () => {
       return unsubscribe();
@@ -61,9 +73,10 @@ const AuthProvider = ({ children }) => {
     user,
     loading,
     createUser,
-    login,
-    logInWithGoogle,
+    signIn,
+    googleSignIn,
     logout,
+    updateUserProfile
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>

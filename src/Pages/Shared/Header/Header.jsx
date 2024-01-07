@@ -12,6 +12,7 @@ const Header = () => {
         <li className='text-xl'><Link to='/bookings'>Project</Link> </li>
         <li className='text-xl'><Link to='/bookings'>Contact</Link> </li>
         <li className='text-xl'><Link to='/addProducts'>Add Products</Link></li>
+        <li className='text-xl'><Link to='/users'>Users</Link></li>
     </>
 
     return (

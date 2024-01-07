@@ -1,65 +1,56 @@
 import React from "react";
 import { Controller, useForm } from "react-hook-form";
 import toast from "react-hot-toast";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
 
 
 const img_hoisting_token = import.meta.env.VITE_Image_Upload_Token;
+
 const EngineForm = () => {
-  const { register, handleSubmit, control } = useForm();
+  const [axiosSecure] = useAxiosSecure()
+  const { register, handleSubmit, control, reset } = useForm();
+
   const img_hosting_url = `https://api.imgbb.com/1/upload?expiration=600&key=${img_hoisting_token}`
 
-  const onSubmit = async (data) => {
+
+  const onSubmit = (data) => {
     const formData = new FormData()
-    formData.append('image',data.image)
+    formData.append("image", data.image)
+    const photo = data.image
+    console.log(photo);
     console.log(data);
-
-
-
-    // Combine form data into a specification object
-    const specificationObject = data.specificationString
-      .split(",")
-      .reduce((acc, item) => {
-        const [key, value] = item.trim().split(":");
-        acc[key] = value.trim();
-        return acc;
-      }, {});
-
-    // Send specificationObject to the backend or perform other actions
-    console.log({ specification: specificationObject });
-    try {
-      // Send data to the backend here
-      console.log(data);
-
-      const response = await fetch("http://localhost:5000/addProduct", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          // You may need to include additional headers like authorization tokens if required by your backend
-        },
-        body: JSON.stringify(data),
-      });
-
-      // Check if the request was successful (status code 2xx)
-      if (response.ok) {
-        const responseData = await response.json();
-        toast.success("successfully added")
-        // Handle the response data as needed
-        console.log("Response from server:", responseData);
-      } else {
-        // If the request was not successful, handle the error
-        console.error(
-          "Error submitting data. Server responded with:",
-          response.status,
-          response.statusText
-        );
-      }
-    } catch (error) {
-      console.error("Error submitting data:", error);
-    }
+    fetch(img_hosting_url, {
+      method: "POST",
+      body: formData,
+    }).then(res => res.json())
+      .then((imgResponse) => {
+        if (imgResponse.success) {
+          const imgUrl = imgResponse.data.display_url
+          const { category, source, statas, location,availability,exported } = data;
+          const newItem = {
+            category,
+            source,
+            statas,
+            location,
+            availability,
+            exported,
+            image: imgUrl
+          };
+          console.log(newItem);
+          axiosSecure.post('/addProduct', newItem)
+            .then(data => { 
+              console.log("After adding product", data.data);
+              if (data.data.insertedId) {
+                reset()
+                toast.success("Product added successfully")
+              }
+            })
+        }
+      })
   };
   return (
-    <div class="max-w-2xl mx-auto p-6 bg-white rounded-md shadow-md">
-      <h2 class="text-2xl font-serif font-semibold mb-4">Engine Specification Form</h2>
+    <div className="max-w-2xl mx-auto p-6 bg-white rounded-md shadow-md">
+      <h2 className="text-2xl font-serif font-semibold mb-4">Engine Specification Form</h2>
 
       <form onSubmit={handleSubmit(onSubmit)}>
         {/* ... Your form fields ... */}
@@ -110,7 +101,7 @@ const EngineForm = () => {
             id="status"
             name="status"
             className="mt-1 p-2 border rounded-md w-full"
-            {...register("status")}
+            {...register("statas")}
           />
         </div>
         <div className="mb-4">
@@ -157,10 +148,10 @@ const EngineForm = () => {
           </label>
           <input
             type="text"
-            id="export"
-            name="export"
+            id="exported"
+            name="exported"
             className="mt-1 p-2 border rounded-md w-full"
-            {...register("export")}
+            {...register("exported")}
           />
         </div>
 
@@ -208,13 +199,13 @@ const EngineForm = () => {
           />
         </div>
         <div className="mt-6">
-                <button
-                  type="submit"
-                  className="bg-blue-500 text-white px-4 py-2 rounded-md"
-                >
-                  Submit
-                </button>
-              </div>
+          <button
+            type="submit"
+            className="bg-blue-500 text-white px-4 py-2 rounded-md"
+          >
+            Submit
+          </button>
+        </div>
       </form>
     </div>
   );

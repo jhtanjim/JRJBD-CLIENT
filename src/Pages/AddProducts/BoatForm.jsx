@@ -1,76 +1,114 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
+import { AuthContext } from '../../provider/AuthProvider';
+import useAxiosSecure from '../../hooks/useAxiosSecure';
 
 
 const img_hoisting_token = import.meta.env.VITE_Image_Upload_Token;
 const BoatForm = () => {
-  const { register, handleSubmit } = useForm();
+  const { user } = useContext(AuthContext)
+  const [axiosSecure] = useAxiosSecure()
+  const { register, handleSubmit, reset } = useForm();
   const img_hosting_url = `https://api.imgbb.com/1/upload?key=${img_hoisting_token}`
+  const userImage = user && user.photoURL;
+  // const [files, setFile] = useState()
 
-  const onSubmit = async (data) => {
-    const image = data.image;
+  // const handleChange = data => {
+  //   setFile(data.image)
+  //   console.log(data.image);
+  // }
+
+  const onSubmit = (data) => {
     const formData = new FormData()
-
-    // for(let i = 0; i < image.length; i++) {
-    //   formData.append(`image${i}`,data.image[i])
-    // }
-    // formData.append('image', data.image[0])
-
-    console.log(data.image)
-
+    // const image = data.image.length;
+    // console.log(image);
+    console.log(data);
+    for (let i = 0; i < data.image.length; i++) {
+      formData.append(`image[${i}]`, data.image[0])
+    }
     fetch(img_hosting_url, {
       method: 'POST',
       body: formData
-    })
-      .then(res => {
-        if (!res.ok) {
-          // Reject the promise and catch the error
-          throw res;
-        }
-        return res.json();
-      })
+    }).then(res => res.json())
       .then(imgResponse => {
-        console.log(imgResponse);
+        if (imgResponse.success) {
+          const imgUrl = imgResponse.data.display_url
+          const {
+            sun_bed,
+            steering,
+            seat_system,
+            rudder,
+            rear_deck,
+            // image,
+            engine_box,
+            engine,
+            customization,
+            cooling_system,
+            control_board,
+            category,
+            boat_edge,
+          } = data;
+          const newItem = {
+            sun_bed,
+            steering,
+            seat_system,
+            rudder,
+            rear_deck,
+            image: imgUrl,
+            userImage,
+            engine_box,
+            engine,
+            customization,
+            cooling_system,
+            control_board,
+            category,
+            boat_edge,
+          };
+          console.log(newItem);
+          axiosSecure.post('/addProduct', newItem)
+            .then(data => {
+              if (data.data.insertedId) {
+                reset()
+                toast.success("Product added successfully")
+              }
+            })
+        }
       })
-      .catch(err => {
-        // Handle the error here
-        console.error(err);
-      });
 
 
 
-    try {
-      const response = await fetch("http://localhost:5000/addProduct", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          // You may need to include additional headers like authorization tokens if required by your backend
-        },
-        body: JSON.stringify(data),
-      });
+    // try {
+    //   const response = await fetch("http://localhost:5000/addProduct", {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //       // You may need to include additional headers like authorization tokens if required by your backend
+    //     },
+    //     body: JSON.stringify(data),
+    //   });
 
-      // Check if the request was successful (status code 2xx)
-      if (response.ok) {
-        const responseData = await response.json();
-        // Handle the response data as needed
-        toast.success("successfully added")
-        console.log("Response from server:", responseData);
-      } else {
-        // If the request was not successful, handle the error
-        console.error(
-          "Error submitting data. Server responded with:",
-          response.status,
-          response.statusText
-        );
-      }
-    } catch (error) {
-      console.error("Error submitting data:", error);
-    }
+    //   // Check if the request was successful (status code 2xx)
+    //   if (response.ok) {
+    //     const responseData = await response.json();
+    //     // Handle the response data as needed
+    //     toast.success("successfully added")
+    //     console.log("Response from server:", responseData);
+    //   } else {
+    //     // If the request was not successful, handle the error
+    //     console.error(
+    //       "Error submitting data. Server responded with:",
+    //       response.status,
+    //       response.statusText
+    //     );
+    //   }
+    // } catch (error) {
+    //   console.error("Error submitting data:", error);
+    // }
   };
   return (
-    <div class="max-w-2xl mx-auto p-6 bg-white rounded-md shadow-md">
-      <h2 class="text-2xl font-serif font-semibold mb-4">Boat Specification Form</h2>
+    <div className="max-w-2xl mx-auto p-6 bg-white rounded-md shadow-md">
+      <h2 className="text-2xl font-serif font-semibold mb-4">Boat Specification Form</h2>
 
       <form onSubmit={handleSubmit(onSubmit)}>
         {/* ... Your form fields ... */}
@@ -110,17 +148,17 @@ const BoatForm = () => {
         </div>
         <div className="mb-4">
           <label
-            htmlFor="cooling-system"
+            htmlFor="cooling_system"
             className="block text-sm font-medium text-gray-600"
           >
-            cooling-system
+            Cooling_System
           </label>
           <input
             type="text"
-            id="cooling-system"
-            name="cooling-system"
+            id="cooling_system"
+            name="cooling_system"
             className="mt-1 p-2 border rounded-md w-full"
-            {...register("cooling-system")}
+            {...register("cooling_system")}
           />
         </div>
         <div className="mb-4">
@@ -140,92 +178,92 @@ const BoatForm = () => {
         </div>
         <div className="mb-4">
           <label
-            htmlFor="boat-edge"
+            htmlFor="boat_edge"
             className="block text-sm font-medium text-gray-600"
           >
-            boat-edge
+            Boat_Edge
           </label>
           <input
             type="text"
-            id="boat-edge"
-            name="boat-edge"
+            id="boat_edge"
+            name="boat_edge"
             className="mt-1 p-2 border rounded-md w-full"
-            {...register("boat-edge")}
+            {...register("boat_edge")}
           />
         </div>
         <div className="mb-4">
           <label
-            htmlFor="sun-bed"
+            htmlFor="sun_bed"
             className="block text-sm font-medium text-gray-600"
           >
-            sun-bed
+            Sun_bed
           </label>
           <input
             type="text"
-            id="sun-bed"
-            name="sun-bed"
+            id="sun_bed"
+            name="sun_bed"
             className="mt-1 p-2 border rounded-md w-full"
-            {...register("sun-bed")}
+            {...register("sun_bed")}
           />
         </div>
         <div className="mb-4">
           <label
-            htmlFor="rear-deck"
+            htmlFor="rear_deck"
             className="block text-sm font-medium text-gray-600"
           >
-            rear-deck
+            Rear_Deck
           </label>
           <input
             type="text"
-            id="rear-deck"
-            name="rear-deck"
+            id="rear_deck"
+            name="rear_deck"
             className="mt-1 p-2 border rounded-md w-full"
-            {...register("rear-deck")}
+            {...register("rear_deck")}
           />
         </div>
         <div className="mb-4">
           <label
-            htmlFor="seat-system"
+            htmlFor="seat_system"
             className="block text-sm font-medium text-gray-600"
           >
-            seat-system
+            Seat_System
           </label>
           <input
             type="text"
-            id="seat-system"
-            name="seat-system"
+            id="seat_system"
+            name="seat_system"
             className="mt-1 p-2 border rounded-md w-full"
-            {...register("seat-system")}
+            {...register("seat_system")}
           />
         </div>
         <div className="mb-4">
           <label
-            htmlFor="engine-box"
+            htmlFor="engine_box"
             className="block text-sm font-medium text-gray-600"
           >
-            engine-box
+            Engine_Box
           </label>
           <input
             type="text"
-            id="engine-box"
-            name="engine-box"
+            id="engine_box"
+            name="engine_box"
             className="mt-1 p-2 border rounded-md w-full"
-            {...register("engine-box")}
+            {...register("engine_box")}
           />
         </div>
         <div className="mb-4">
           <label
-            htmlFor="control-board"
+            htmlFor="control_board"
             className="block text-sm font-medium text-gray-600"
           >
-            control-board
+            Control_Board
           </label>
           <input
             type="text"
-            id="control-board"
-            name="control-board"
+            id="control_board"
+            name="control_board"
             className="mt-1 p-2 border rounded-md w-full"
-            {...register("control-board")}
+            {...register("control_board")}
           />
         </div>
         <div className="mb-4">
