@@ -1,0 +1,20 @@
+[
+    {
+        "id": 0,
+        "name": "Yanmar",
+        "images": [
+            "path/to/yanmar_image1.jpg",
+            "path/to/yanmar_image2.jpg"
+        ],
+        "description": "A manufacturer of marine engines, known for producing efficient and durable diesel engines for ships and boats."
+    },
+    {
+        "id": 1,
+        "name": "Daihatsu",
+        "images": [
+            "path/to/daihatsu_image1.jpg",
+            "path/to/daihatsu_image2.jpg"
+        ],
+        "description": "A provider of marine diesel engines, known for reliability and used in various maritime applications."
+    }
+]

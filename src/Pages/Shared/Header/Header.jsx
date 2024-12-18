@@ -7,8 +7,8 @@ const Header = () => {
     const navItems = <>
         <li className='text-xl'><Link to='/'>Home</Link></li>
         <li className='text-xl'><Link to='/about'>About</Link> </li>
-        <li className='text-xl'><Link to='/bookings'>Service</Link> </li>
-        <li className='text-xl'><Link to='/bookings'>Project</Link> </li>
+        <li className='text-xl'><Link to='/services'>Service</Link> </li>
+        <li className='text-xl'><Link to='/allproduct'>All Product</Link> </li>
         <li className='text-xl'><Link to='/bookings'>Contact</Link> </li>
 
 
@@ -17,7 +17,8 @@ const Header = () => {
 
     return (
         <div className=''>
-            <div className="navbar fixed z-10 bg-opacity-90 h-28 bg-white">
+            <div className="navbar bg-opacity-90 h-28 bg-white">
+            {/* <div className="navbar fixed z-10 bg-opacity-90 h-28 bg-white"> */}
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">

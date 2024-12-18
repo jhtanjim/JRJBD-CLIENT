@@ -1,0 +1,56 @@
+[
+    {
+        "id": 18,
+        "name": "Purchasing",
+        "images": [
+            "path/to/purchasing_image1.jpg",
+            "path/to/purchasing_image2.jpg"
+        ],
+        "description": "The process of acquiring necessary items and equipment for the vessel's operations and maintenance."
+    },
+    {
+        "id": 19,
+        "name": "Provision Bunker",
+        "images": [
+            "path/to/provision_bunker_image1.jpg",
+            "path/to/provision_bunker_image2.jpg"
+        ],
+        "description": "The supply of fuel and provisions, such as food and other necessities, for the crew and the vessel."
+    },
+    {
+        "id": 20,
+        "name": "Chipping and Painting",
+        "images": [
+            "path/to/chipping_and_painting_image1.jpg",
+            "path/to/chipping_and_painting_image2.jpg"
+        ],
+        "description": "The maintenance task of removing rust and old paint from the ship’s surface and applying a new coat to protect the vessel."
+    },
+    {
+        "id": 21,
+        "name": "Garbage",
+        "images": [
+            "path/to/garbage_image1.jpg",
+            "path/to/garbage_image2.jpg"
+        ],
+        "description": "The handling and proper disposal of waste generated onboard during the vessel's operation."
+    },
+    {
+        "id": 22,
+        "name": "Cleaner",
+        "images": [
+            "path/to/cleaner_image1.jpg",
+            "path/to/cleaner_image2.jpg"
+        ],
+        "description": "A worker or product used for cleaning different areas of the vessel, ensuring hygienic conditions."
+    },
+    {
+        "id": 23,
+        "name": "Contractor and General Suppliers",
+        "images": [
+            "path/to/contractor_general_suppliers_image1.jpg",
+            "path/to/contractor_general_suppliers_image2.jpg"
+        ],
+        "description": "Suppliers and contractors providing various goods, services, and repairs to ensure the smooth operation of the vessel."
+    }
+]

@@ -1,0 +1,150 @@
+[
+    {
+        "model": "TEAK-AA",
+        "size": "7.3M to 8.0M",
+        "engine": "HP-30, Water-cooled, Electrical start",
+        "features": {
+            "reverse_gear": true,
+            "fuel_tank": "Diesel",
+            "propeller": "Polished",
+            "steering_wheel": "Stainless steel, Hydraulic or mono cable",
+            "rudder": "Stainless steel",
+            "seat_height": "45cm or as required",
+            "sundeck": "2.0M, Teak wood top, 20cm higher than seat",
+            "rear_deck": "1.0M, Teak wood top, 10cm higher than seat",
+            "floor": "Removable Teak wood",
+            "engine_box": "Polyester, Teak wood top",
+            "wheel_stand": "Polyester, Teak wood top",
+            "storage_boxes": [
+                "Under sundeck, Inside opening",
+                "Under rear deck, Top side opening",
+                "Under seat, Fuel tank and cool box"
+            ]
+        },
+        "finish": "Dark blue or dark grey, Sanded and painted",
+        "lead_time": "60 days",
+        "price": {
+            "7.3M": "7,000",
+            "7.5M": "8,000",
+            "8.0M": "12,000"
+        },
+        "payment_terms": "50% advance, 50% after completion",
+        "shipment": "Within 5 days after full payment",
+        "images": [
+            "https://i.ibb.co.com/L9hR22Y/IMG-4017.jpg",
+            "https://i.ibb.co.com/Wk1mx95/IMG-4018.jpg",
+            "image3_url"
+        ]
+    },
+    {
+        "model": "TEAK-ARIEL",
+        "size": "6.5M to 8.0M",
+        "engine": "HP-30, Water-cooled, Electrical start",
+        "features": {
+            "reverse_gear": true,
+            "fuel_tank": "Diesel",
+            "propeller": "Polished",
+            "steering_wheel": "Stainless steel, Manual cable",
+            "rudder": "New stainless steel rudder with attachment points",
+            "seat_height": "Like as model boat",
+            "sundeck": "Size like model boat, 20cm higher than seat level",
+            "rear_deck": "Size like model boat, 10cm higher than seat level",
+            "floor": "Removable wooden floor made of Teak wood",
+            "engine_box": "Polyester with Teak wood top (ISOLATED)",
+            "wheel_stand": "Polyester with Teak wood top",
+            "storage_boxes": [
+                "Under sundeck, Door inside opening",
+                "Under rear deck, Top side opening",
+                "Under seat, Fuel tank and 4 additional boxes"
+            ]
+        },
+        "finish": "Sanded and painted as per buyer's instruction",
+        "lead_time": "60 days",
+        "price": {
+            "6.5M": "9,000",
+            "7.5M": "10,000",
+            "8.0M": "12,000"
+        },
+        "payment_terms": "50% advance, 50% after completion",
+        "shipment": "Within 5 days after full payment",
+        "images": [
+            "https://i.ibb.co.com/80gf27M/IMG-4011-JPEG.jpg",
+            "image_url_2",
+            "image_url_3"
+        ]
+    },
+    {
+        "model": "TEAK-EE",
+        "size": "6.5M to 8.0M",
+        "engine": "SABB/HP-30 or LISTER/HP-30 or YANMAR HP-25/30, Water-cooled, Electrical start",
+        "features": {
+            "reverse_gear": true,
+            "fuel_tank": "Diesel",
+            "propeller": "Polished",
+            "steering_wheel": "Stainless steel, Manual cable",
+            "rudder": "Stainless steel",
+            "seat_height": "Like as model boat",
+            "sundeck": "2.0M, Teak wood top",
+            "rear_deck": "1.0M, Teak wood top",
+            "floor": "Removable Teak wood",
+            "engine_box": "Polyester, Teak wood top",
+            "wheel_stand": "Polyester, Teak wood top",
+            "storage_boxes": [
+                "Under sundeck, Inside and top side opening",
+                "Under rear deck, Top side opening",
+                "Under seat, Fuel tank and 6 boxes"
+            ]
+        },
+        "finish": "As per buyer's instruction, Sanded and painted",
+        "lead_time": "70 days",
+        "price": {
+            "6.5M": "8,000",
+            "7.5M": "10,000",
+            "8.0M": "12,000"
+        },
+        "payment_terms": "50% advance, 50% after completion",
+        "shipment": "Within 5 days after full payment",
+        "images": [
+            "https://i.ibb.co.com/3sz69FV/Whats-App-Image-2024-09-29-at-10-03-12-PM.jpg",
+            "https://i.ibb.co.com/Xy1rsLh/Whats-App-Image-2024-09-29-at-10-03-12-PM-1.jpg",
+            "https://i.ibb.co.com/k8mKVTC/Whats-App-Image-2024-09-29-at-10-03-12-PM-2.jpg",
+            "https://i.ibb.co.com/X7pGxht/Whats-App-Image-2024-09-29-at-10-03-13-PM.jpg"
+        ]
+    },
+    {
+        "model": "POLY-BLUE",
+        "size": "7.5M",
+        "engine": "Volvo penta 2003, HP-28, Freshwater cooled, Electrical starting system",
+        "features": {
+            "reverse_gear": true,
+            "fuel_tank": "Diesel",
+            "propeller": "Polished",
+            "steering_wheel": "Stainless steel, Mono cable",
+            "rudder": "New stainless steel rudder with attachment points",
+            "seat_height": "Like as model boat",
+            "sundeck": "2.0M, Made by polyester, 10cm higher than seat level or as required",
+            "rear_deck": "1.0M, Made by polyester, 10cm lower than boat edge or as required",
+            "floor": "Removable wooden floor like as model boat",
+            "engine_box": "Made by polyester",
+            "wheel_stand": "Made by polyester",
+            "storage_boxes": [
+                "Under sundeck, Door inside opening",
+                "Under rear deck, Door top side opening",
+                "Under seat, For fuel tank, plus 6 additional boxes, top side opening"
+            ]
+        },
+        "finish": "Sanded and painted inside and outside as per buyer's instruction",
+        "lead_time": "65 days",
+        "price": {
+            "6.5M": "9,500",
+            "7.5M": "10,500",
+            "8.0M": "11,500"
+        },
+        "payment_terms": "50% advance, 50% after completion and photo of finished boat",
+        "shipment": "Within 5 days after receiving full payment",
+        "images": [
+            "https://i.ibb.co.com/hYhywbN/IMG-4750.jpg",
+            "https://api.believerssign.com/public/product/4Gwi1OfGt6-8NSUgWil.jpg"
+        ]
+    }
+]

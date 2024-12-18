@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "name": "Bukh Dv24",
+        "picture": "https://i.ibb.co/WfjsmnB/asdasdadasda.jpg",
+        "Specification": "Electric start with 4-stroke Cylinders 2 Cylinder Bore/Stroke - 85/85 Mn HP- 24, RPM- 3600",
+        "category": "Diesel engine",
+        "images": [
+            "https://i.ibb.co.com/KXx77DL/4b586929-cb7e-4a72-9b4f-ac60193e745b.jpg",
+            "https://i.ibb.co.com/xMD0CHV/5f07988a-71b1-4ac3-a95e-6164978a6de9.jpg",
+            "https://i.ibb.co.com/wYB5VPL/aa1b1f55-914f-461e-85fc-8ab23099150d.jpg",
+            "https://i.ibb.co.com/64fBMMh/cc2c3b60-75de-4cd0-961f-b2b7687992cd.jpg",
+            "https://i.ibb.co.com/v1xjxN2/e0ec28bd-1618-4b7b-9168-f2ea3ba9a8e2.jpg"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Yanmer 3JH30A",
+        "picture": "https://i.ibb.co.com/8PGt17P/6e3b8395-9023-4afc-8d62-9313cbf95fd7.jpg",
+        "Specification": "No of cylinders- 3 Cylinder Bore/Stroke- 82/86 mn Direct injection, cooling system with hydraulic gear. HP- 30, RPM- 2900.",
+        "category": "Diesel engine",
+        "images": [
+            "https://i.ibb.co.com/8PGt17P/6e3b8395-9023-4afc-8d62-9313cbf95fd7.jpg",
+            "https://i.ibb.co.com/RSF7PVx/b27d84d8-b704-47d1-9f3e-f7c851e159eb.jpg",
+            "https://i.ibb.co.com/L8Zk4sG/b68ab74a-921f-4fd5-8242-898cfbaa606a.jpg",
+            "https://i.ibb.co.com/XsKRqp1/db364d23-9a0f-41ab-9f75-c471674ef668.jpg"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "3JH25A",
+        "picture": "https://i.ibb.co.com/Lz3YYTw/36a62ee8-58d4-442e-a3f6-f8fa71a94e6a.jpg",
+        "Specification": "No of cylinders- 3 Cylinder Bore/Stroke- 82/86 mn Direct injection, cooling system with hydraulic gear. HP- 25, RPM- 3200.",
+        "category": "Diesel engine",
+        "images": [
+            "https://i.ibb.co.com/Lz3YYTw/36a62ee8-58d4-442e-a3f6-f8fa71a94e6a.jpg",
+            "https://i.ibb.co.com/K7TqQD4/ae62b1b4-e881-468e-bd48-629a0cb2a4a6.jpg",
+            "https://i.ibb.co.com/q1bD3zf/d681987f-5de0-4bd6-adba-b70eeccb9862.jpg",
+            "https://i.ibb.co.com/64BpPNy/edeb739c-ad2e-4847-9153-6bb684f46142.jpg"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Lister LPW3",
+        "picture": "https://i.ibb.co.com/NrkRhZ3/24805198-cb58-4785-bd9a-34aac84eca2c.jpg",
+        "Specification": "Number of cylinders- 3 Cylinder Bore/Stroke- 82/86 mn Cooling- Liquid cooled. HP- 29, RPM- 3000",
+        "category": "Diesel engine",
+        "images": [
+            "https://i.ibb.co.com/NrkRhZ3/24805198-cb58-4785-bd9a-34aac84eca2c.jpg",
+            "https://i.ibb.co.com/BZfKzMN/a295a431-38c8-47c1-a786-ada67e500eb6.jpg",
+            "https://i.ibb.co.com/cxgbPS5/dd1a5e6f-1ae3-4bf4-af66-7cb5c56eaeeb.jpg",
+            "https://i.ibb.co.com/9cY3k1t/edbc5301-857a-49e6-b8aa-0e7e99767ee5.jpg"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Sabb diesel 2JH",
+        "picture": "https://i.ibb.co.com/jH1y3v7/9d2b6b7f-5dbf-499c-877a-0d114c0b1244.jpg",
+        "Specification": "HP- 30 RPM- 1900 Cooling- Keel cool.",
+        "category": "Diesel engine",
+        "images": [
+            "https://i.ibb.co.com/jH1y3v7/9d2b6b7f-5dbf-499c-877a-0d114c0b1244.jpg",
+            "https://i.ibb.co.com/f9hyXVV/508005ad-e8b0-4b49-8cd4-7a0dec1bb8a3.jpg",
+            "https://i.ibb.co.com/30NtVXK/e58df852-a4e5-4686-877b-7a7479c97aa1.jpg",
+            ""
+        ]
+    }
+]
