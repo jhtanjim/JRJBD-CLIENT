@@ -8,6 +8,7 @@ import Boat from "../Pages/Shared/AllProduct/Boat.jsx";
 import MarineEquipment from "../Pages/Shared/AllProduct/MarineEquipment.jsx";
 import Generator from "../Pages/Shared/AllProduct/Generator.jsx";
 import Services from "../Pages/Home/Services/Services.jsx";
+import Contact from "../Pages/Shared/Contact/Contact.jsx";
 
 const router = createBrowserRouter([
   {
@@ -24,28 +25,32 @@ const router = createBrowserRouter([
       },
       {
         path: "/services",
-        element: <Services/>,
+        element: <Services />,
       },
-     
+
       {
         path: "/allproduct",
         element: <AllProduct />,
       },
       {
-        path: "/engines/:id", 
+        path: "/engines/:id",
         element: <Engines />,
       },
       {
-        path: "/boats/:id", 
+        path: "/boats/:id",
         element: <Boat />,
       },
       {
-        path: "/marineEquipments/:id", 
+        path: "/marineEquipments/:id",
         element: <MarineEquipment />,
       },
       {
-        path: "/generators/:id", 
+        path: "/generators/:id",
         element: <Generator />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       },
     ],
   },
