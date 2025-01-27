@@ -1,37 +1,80 @@
-import React from 'react';
-import logo from '../../../assets/logo.svg'
+import React from "react";
+import { Link } from "react-router-dom";
+import logo from "../../../assets/logo.svg";
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
-    return (
-        <div className=''>
-            <footer className="footer p-10 bg-base-200 text-base-content">
-                <div>
-                    <img className='w-auto h-36' src={logo} alt="" />
-                    <p>ACME Industries Ltd.<br />Providing reliable tech since 1992</p>
-                </div>
-                <div>
-                    <span className="footer-title">Services</span>
-                    <a className="link link-hover">Branding</a>
-                    <a className="link link-hover">Design</a>
-                    <a className="link link-hover">Marketing</a>
-                    <a className="link link-hover">Advertisement</a>
-                </div>
-                <div>
-                    <span className="footer-title">Company</span>
-                    <a className="link link-hover">About us</a>
-                    <a className="link link-hover">Contact</a>
-                    <a className="link link-hover">Jobs</a>
-                    <a className="link link-hover">Press kit</a>
-                </div>
-                <div>
-                    <span className="footer-title">Legal</span>
-                    <a className="link link-hover">Terms of use</a>
-                    <a className="link link-hover">Privacy policy</a>
-                    <a className="link link-hover">Cookie policy</a>
-                </div>
-            </footer>
+  const footerItems = (
+    <>
+      <li className="text-lg">
+        <Link to="/">Home</Link>
+      </li>
+      <li className="text-lg">
+        <Link to="/about">About</Link>
+      </li>
+      <li className="text-lg">
+        <Link to="/services">Services</Link>
+      </li>
+      <li className="text-lg">
+        <Link to="/allproduct">All Products</Link>
+      </li>
+      <li className="text-lg">
+        <Link to="/contact">Contact</Link>
+      </li>
+    </>
+  );
+
+  return (
+    <div className="bg-gray-100 text-black py-16">
+      <div className="container mx-auto px-6">
+        <div className="flex flex-col lg:flex-row justify-between items-center space-y-8 lg:space-y-0">
+          {/* Logo Section */}
+          <div className="flex justify-center items-center">
+            <Link to="/">
+              <img className="h-28" src={logo} alt="Company Logo" />
+            </Link>
+          </div>
+
+          {/* Footer Links */}
+          <div>
+            <ul className="menu menu-vertical lg:menu-horizontal flex space-x-4 lg:space-x-6 text-lg">
+              {footerItems}
+            </ul>
+          </div>
+
+          {/* Social Links */}
+          <div className="flex space-x-6">
+            <a href="#" className="text-2xl hover:text-gray-300">
+              <FaFacebook />
+            </a>
+            <a href="#" className="text-2xl hover:text-gray-300">
+              <FaTwitter />
+            </a>
+            <a href="#" className="text-2xl hover:text-gray-300">
+              <FaInstagram />
+            </a>
+            <a href="#" className="text-2xl hover:text-gray-300">
+              <FaLinkedin />
+            </a>
+          </div>
         </div>
-    );
+
+        {/* Bottom Section */}
+        <div className="mt-8 text-center">
+          <Link to={"/contact"}>
+            <button className="btn btn-outline btn-primary px-6 py-2 rounded-lg text-lg">
+              Make an Appointment
+            </button>
+          </Link>
+        </div>
+      </div>
+
+      {/* Bottom Copyright */}
+      <div className="text-center mt-8 text-sm">
+        <p>&copy; {new Date().getFullYear()} jrjbd. All Rights Reserved.</p>
+      </div>
+    </div>
+  );
 };
 
 export default Footer;

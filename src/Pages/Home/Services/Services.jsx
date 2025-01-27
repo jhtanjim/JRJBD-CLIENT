@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   FaArtstation,
   FaChartLine,
@@ -13,13 +13,13 @@ import {
   FaNetworkWired,
   FaPhoenixSquadron,
 } from "react-icons/fa";
-import { GiPowerGenerator, GiShipWheel } from 'react-icons/gi';
-import { IoMdBoat } from 'react-icons/io';
-import { SiCoronaengine } from 'react-icons/si';
+import { GiPowerGenerator, GiShipWheel } from "react-icons/gi";
+import { IoMdBoat } from "react-icons/io";
+import { SiCoronaengine } from "react-icons/si";
 const Services = () => {
   return (
-    <div className='max-w-screen-xl lg:mx-auto mx-4'>
-        <div className="ms-4">
+    <div className="max-w-screen-xl lg:mx-auto mx-4">
+      <div className="ms-4">
         <p className="font-bold text-[#F86518]">OUR SERVICES</p>
         <h1 className="lg:text-5xl text-xl pt-1 font-bold lg:mb-10 text-[#05345E]">
           Featured service that we Provide
@@ -35,7 +35,7 @@ const Services = () => {
         >
           <figure className="px-10 pt-10">
             <span className="text-6xl">
-            <IoMdBoat />
+              <IoMdBoat />
             </span>
           </figure>
 
@@ -43,8 +43,9 @@ const Services = () => {
             Boat
           </h2>
           <p className="text-xs  text-center mt-2 pb-10  opacity-70">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt. .{" "}
+            We have three types of lifeboats- open lifeboats, fully enclosed
+            lifeboats and slope lifeboats. These lifeboats we collect from the
+            ship recycling yard at Chittagong, Bangladesh
           </p>
         </div>
         <div
@@ -55,17 +56,16 @@ const Services = () => {
         >
           <figure className="px-10 pt-10">
             <span className="text-6xl">
-            <GiShipWheel />
-
+              <GiShipWheel />
             </span>
           </figure>
 
           <h2 className="card-title lg:text-2xl mx-auto mt-2 text-[#F86518] font-bold">
-          Motor
+            Motor
           </h2>
           <p className="text-xs  text-center mt-2 pb-10  opacity-70">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt. .{" "}
+            We have various kinds of inboard and outboard diesel engines - Bukh,
+            Yanmar,Yamaha, Sabb Motor, Lister Peter ,Nanni,Daihatsu, Volvo penta
           </p>
         </div>
         <div
@@ -76,8 +76,7 @@ const Services = () => {
         >
           <figure className="px-10 pt-10">
             <span className="text-6xl">
-            <SiCoronaengine />
-
+              <SiCoronaengine />
             </span>
           </figure>
 
@@ -85,8 +84,9 @@ const Services = () => {
             Marine Equipment
           </h2>
           <p className="text-xs  text-center mt-2 pb-10  opacity-70">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt. .{" "}
+            Lots of marine equipment we have stock. These are original and used
+            - Navigation light, braz light, Compass, Radar, Life jackets, fire
+            Extinguish, Anchor, Searchlight etc.
           </p>
         </div>
         <div
@@ -97,8 +97,7 @@ const Services = () => {
         >
           <figure className="px-10 pt-10">
             <span className="text-6xl">
-            <FaDharmachakra />
-
+              <FaDharmachakra />
             </span>
           </figure>
 
@@ -106,8 +105,9 @@ const Services = () => {
             Ship Chandling
           </h2>
           <p className="text-xs  text-center mt-2 pb-10  opacity-70">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt. .{" "}
+            We provide a wide range of ship supplies, including food, fuel, and
+            maintenance equipment, ensuring all your vessel's needs are met
+            efficiently.
           </p>
         </div>
         <div
@@ -118,19 +118,17 @@ const Services = () => {
         >
           <figure className="px-10 pt-10">
             <span className="text-6xl">
-            <GiPowerGenerator />
-
-
-
+              <GiPowerGenerator />
             </span>
           </figure>
 
           <h2 className="card-title lg:text-2xl mx-auto mt-2 text-[#F86518] font-bold">
-          Generator
+            Generator
           </h2>
           <p className="text-xs  text-center mt-2 pb-10  opacity-70">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt. .{" "}
+            Our generators are reliable, durable, and sourced from top brands to
+            provide uninterrupted power for your marine and industrial
+            applications.
           </p>
         </div>
         <div
@@ -141,8 +139,7 @@ const Services = () => {
         >
           <figure className="px-10 pt-10">
             <span className="text-6xl">
-            <SiCoronaengine />
-
+              <SiCoronaengine />
             </span>
           </figure>
 
@@ -150,13 +147,11 @@ const Services = () => {
             Marine Equipment
           </h2>
           <p className="text-xs  text-center mt-2 pb-10  opacity-70">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt. .{" "}
+            We stock a variety of original marine equipment, including
+            navigation lights, compasses, radars, life jackets, anchors, and
+            searchlights.
           </p>
         </div>
-      
-      
-     
       </div>
     </div>
   );

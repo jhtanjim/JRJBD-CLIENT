@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../../assets/logo.svg";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
+
 const Header = () => {
   const navItems = (
     <>
@@ -8,24 +10,23 @@ const Header = () => {
         <Link to="/">Home</Link>
       </li>
       <li className="text-xl">
-        <Link to="/about">About</Link>{" "}
+        <Link to="/about">About</Link>
       </li>
       <li className="text-xl">
-        <Link to="/services">Service</Link>{" "}
+        <Link to="/services">Services</Link>
       </li>
       <li className="text-xl">
-        <Link to="/allproduct">All Product</Link>{" "}
+        <Link to="/allproduct">All Products</Link>
       </li>
       <li className="text-xl">
-        <Link to="/contact">Contact</Link>{" "}
+        <Link to="/contact">Contact</Link>
       </li>
     </>
   );
 
   return (
-    <div className="">
+    <div>
       <div className="navbar bg-opacity-90 h-28 bg-white">
-        {/* <div className="navbar fixed z-10 bg-opacity-90 h-28 bg-white"> */}
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -52,14 +53,27 @@ const Header = () => {
             </ul>
           </div>
           <Link to="/">
-            <img className="h-36" src={logo} alt="" />
+            <img className="h-36" src={logo} alt="Logo" />
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navItems}</ul>
         </div>
-        <div className="navbar-end">
-          <button className="btn btn-outline btn-primary">Appointment</button>
+        <div className="navbar-end flex items-center space-x-4">
+          {/* Social Media Links */}
+          <a
+            href="https://www.facebook.com"
+            className="text-2xl hover:text-blue-600"
+          >
+            <FaFacebook />
+          </a>
+          <a
+            href="https://www.instagram.com"
+            className="text-2xl hover:text-pink-500"
+          >
+            <FaInstagram />
+          </a>
+          {/* Contact Info */}
         </div>
       </div>
     </div>

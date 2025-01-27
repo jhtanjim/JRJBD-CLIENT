@@ -3,7 +3,7 @@
         "id": 0,
         "name": "Navigation Light",
         "images": [
-            "path/to/navigation_light_image1.jpg",
+            "https://i.ibb.co.com/TwDSpGK/Whats-App-Image-2025-01-27-at-19-09-43-5b8ffcff.jpg",
             "path/to/navigation_light_image2.jpg"
         ],
         "description": "A light used on ships to ensure visibility and safe navigation during low light or nighttime conditions."
@@ -12,8 +12,9 @@
         "id": 1,
         "name": "Brazz Light",
         "images": [
-            "path/to/brazz_light_image1.jpg",
-            "path/to/brazz_light_image2.jpg"
+            "https://i.ibb.co.com/cxJRysh/Whats-App-Image-2025-01-27-at-19-28-37-a505ae10.jpg",
+            "https://i.ibb.co.com/85p5nWs/Whats-App-Image-2025-01-27-at-19-12-58-04acadf9.jpg",
+            "https://i.ibb.co.com/vdbxVGr/BAZZ-LIGHT.jpg"
         ],
         "description": "A light fixture typically used in marine applications, offering illumination in various sections of a vessel."
     },
@@ -21,8 +22,8 @@
         "id": 2,
         "name": "Compass",
         "images": [
-            "path/to/compass_image1.jpg",
-            "path/to/compass_image2.jpg"
+            "https://i.ibb.co.com/vk3x8Vj/Whats-App-Image-2025-01-27-at-19-27-35-03b09608.jpg",
+            "https://i.ibb.co.com/DWbH45Z/Whats-App-Image-2025-01-27-at-19-30-11-64f2d4e5.jpg"
         ],
         "description": "An instrument used for navigation and orientation, showing direction relative to the Earth's magnetic poles."
     },
@@ -46,9 +47,18 @@
     },
     {
         "id": 5,
-        "name": "Boat Anchor",
+        "name": "Ship Anchor",
         "images": [
-            "path/to/boat_anchor_image1.jpg",
+            "https://i.ibb.co.com/8zK3fGp/Whats-App-Image-2025-01-27-at-19-19-56-80a702d8.jpg",
+            "path/to/boat_anchor_image2.jpg"
+        ],
+        "description": "A heavy object used to moor the vessel to the seabed, preventing it from drifting."
+    },
+    {
+        "id": 245,
+        "name": "Boat  Anchor",
+        "images": [
+            "https://i.ibb.co.com/JdK5WCP/Whats-App-Image-2025-01-27-at-19-34-14-b451f597.jpg",
             "path/to/boat_anchor_image2.jpg"
         ],
         "description": "A heavy object used to moor the vessel to the seabed, preventing it from drifting."
@@ -64,13 +74,14 @@
     },
     {
         "id": 7,
-        "name": "Telegraph",
+        "name": "Telegraph (Brazz)",
         "images": [
-            "path/to/telegraph_image1.jpg",
+            "https://i.ibb.co.com/jV9DKLC/Whats-App-Image-2025-01-27-at-19-19-57-846a9314.jpg",
             "path/to/telegraph_image2.jpg"
         ],
         "description": "An engine order telegraph used for communicating commands to the engine room from the bridge."
     },
+   
     {
         "id": 8,
         "name": "Ship Steering Wheel",
@@ -97,5 +108,40 @@
             "path/to/life_raft_image2.jpg"
         ],
         "description": "A small, inflatable raft used as a means of escape in the event of an emergency."
+    },
+    {
+        "id": 11,
+        "name": "Life Buoy Ring",
+        "images": [
+            "https://i.ibb.co.com/hM8sq2T/Whats-App-Image-2025-01-27-at-19-14-09-a1cfedf2.jpg",
+            "path/to/life_raft_image2.jpg"
+        ],
+        "description": ""
+    },
+    {
+        "id": 12,
+        "name": "Telegraph (Aluminium)",
+        "images": [
+             "https://i.ibb.co.com/w4WnzV0/Whats-App-Image-2025-01-27-at-19-20-00-11d25f80.jpg","https://i.ibb.co.com/jV9DKLC/Whats-App-Image-2025-01-27-at-19-19-57-846a9314.jpg"
+           
+        ],
+        "description": "An engine order telegraph used for communicating commands to the engine room from the bridge."
+    
+    },
+    {
+        "id": 13,
+        "name": "Wood wheel Steering",
+        "images": [
+             "https://i.ibb.co.com/wYfQ4T6/Whats-App-Image-2025-01-27-at-19-25-34-3a8e4063.jpg"
+           
+        ],
+        "description": "An engine order telegraph used for communicating commands to the engine room from the bridge."
+    },
+    {
+        "id":14,
+        "name": " Big ship Navigation Light",
+        "images": [
+            "https://i.ibb.co.com/6ZYXFCc/Whats-App-Image-2025-01-27-at-19-32-15-6d7307fe.jpg"        ],
+        "description": "A light used on ships to ensure visibility and safe navigation during low light or nighttime conditions."
     }
 ]
