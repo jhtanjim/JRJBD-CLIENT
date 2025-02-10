@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Bukh Dv24",
-        "picture": "https://i.ibb.co/WfjsmnB/asdasdadasda.jpg",
+        "picture": "https://i.ibb.co.com/xMD0CHV/5f07988a-71b1-4ac3-a95e-6164978a6de9.jpg",
         "Specification": "Electric start with 4-stroke Cylinders 2 Cylinder Bore/Stroke - 85/85 Mn HP- 24, RPM- 3600",
         "category": "Diesel engine",
         "images": [
@@ -42,7 +42,7 @@
     {
         "id": 4,
         "name": "Lister LPW3",
-        "picture": "https://i.ibb.co.com/NrkRhZ3/24805198-cb58-4785-bd9a-34aac84eca2c.jpg",
+        "picture": "https://i.ibb.co.com/BZfKzMN/a295a431-38c8-47c1-a786-ada67e500eb6.jpg",
         "Specification": "Number of cylinders- 3 Cylinder Bore/Stroke- 82/86 mn Cooling- Liquid cooled. HP- 29, RPM- 3000",
         "category": "Diesel engine",
         "images": [
@@ -62,6 +62,32 @@
             "https://i.ibb.co.com/jH1y3v7/9d2b6b7f-5dbf-499c-877a-0d114c0b1244.jpg",
             "https://i.ibb.co.com/f9hyXVV/508005ad-e8b0-4b49-8cd4-7a0dec1bb8a3.jpg",
             "https://i.ibb.co.com/30NtVXK/e58df852-a4e5-4686-877b-7a7479c97aa1.jpg",
+            ""
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Out Board Motor",
+        "picture": "https://i.ibb.co.com/cchVDxTN/Whats-App-Image-2025-02-09-at-13-09-53-2e77aeb9.jpg",
+        "Specification": "Yanmer D-36",
+        "category": "Diesel engine",
+        "images": [
+            "https://i.ibb.co.com/cchVDxTN/Whats-App-Image-2025-02-09-at-13-09-53-2e77aeb9.jpg",
+            "https://i.ibb.co.com/7drCXZQY/Whats-App-Image-2025-02-09-at-13-09-53-5e352282.jpg",
+            "https://i.ibb.co.com/FkPwD3w3/Whats-App-Image-2025-02-09-at-13-09-54-16244d97.jpg",
+            ""
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Volvo penta ",
+        "picture": "https://i.ibb.co.com/5hp9M14P/Whats-App-Image-2025-02-09-at-13-33-02-ba4c6464.jpg",
+        "Specification": "HP- 29 RPM- 3600 fresh water coolingw.",
+        "category": "Diesel engine",
+        "images": [
+            "https://i.ibb.co.com/y9m66y4/Whats-App-Image-2025-02-09-at-13-33-02-dfc55888.jpg",
+            "https://i.ibb.co.com/tpx8brTf/Whats-App-Image-2025-02-09-at-13-33-02-3f79c6af.jpg",
+            "https://i.ibb.co.com/5hp9M14P/Whats-App-Image-2025-02-09-at-13-33-02-ba4c6464.jpg",
             ""
         ]
     }

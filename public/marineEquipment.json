@@ -31,8 +31,8 @@
         "id": 3,
         "name": "Life Jackets",
         "images": [
-            "path/to/life_jackets_image1.jpg",
-            "path/to/life_jackets_image2.jpg"
+            "https://i.ibb.co.com/hFm5GXJK/image.png",
+            "https://i.ibb.co.com/65zjQNb/image.png"
         ],
         "description": "Personal flotation devices designed to keep a person afloat in water during emergencies."
     },
@@ -40,8 +40,8 @@
         "id": 4,
         "name": "Fire Extinguisher",
         "images": [
-            "path/to/fire_extinguisher_image1.jpg",
-            "path/to/fire_extinguisher_image2.jpg"
+            "https://i.ibb.co.com/bgJ0Wh6j/image.png",
+            "https://i.ibb.co.com/yFpFyFj6/image.png"
         ],
         "description": "A device used to extinguish small fires aboard the vessel."
     },
@@ -67,8 +67,8 @@
         "id": 6,
         "name": "Search Light",
         "images": [
-            "path/to/search_light_image1.jpg",
-            "path/to/search_light_image2.jpg"
+            "https://i.ibb.co.com/j9zWPF4t/Whats-App-Image-2025-02-09-at-13-27-00-eb0bd739.jpg",
+            "https://i.ibb.co.com/R4PNsLjG/Whats-App-Image-2025-02-09-at-13-27-00-39941e04.jpg"
         ],
         "description": "A powerful light used to illuminate areas, typically during search and rescue operations or low-visibility situations."
     },
@@ -84,9 +84,9 @@
    
     {
         "id": 8,
-        "name": "Ship Steering Wheel",
+        "name": "Boat Steering Wheel",
         "images": [
-            "path/to/ship_steering_wheel_image1.jpg",
+            "https://i.ibb.co.com/ks95y9Vh/image.png",
             "path/to/ship_steering_wheel_image2.jpg"
         ],
         "description": "A wheel used to steer the vessel, controlling its direction."
@@ -95,7 +95,7 @@
         "id": 9,
         "name": "Wind Indicator",
         "images": [
-            "path/to/wind_indicator_image1.jpg",
+            "https://i.ibb.co.com/h1mmP36v/Whats-App-Image-2025-02-09-at-13-06-42-a702c5e6.jpg",
             "path/to/wind_indicator_image2.jpg"
         ],
         "description": "A device used to show the direction and speed of the wind."
@@ -104,8 +104,8 @@
         "id": 10,
         "name": "Life Raft",
         "images": [
-            "path/to/life_raft_image1.jpg",
-            "path/to/life_raft_image2.jpg"
+            "https://i.ibb.co.com/hx50cdhb/Whats-App-Image-2025-02-09-at-13-17-24-de7aeaef.jpg",
+            "https://i.ibb.co.com/VWBXjtVn/Whats-App-Image-2025-02-09-at-13-17-25-4b88087a.jpg"
         ],
         "description": "A small, inflatable raft used as a means of escape in the event of an emergency."
     },
@@ -143,5 +143,13 @@
         "images": [
             "https://i.ibb.co.com/6ZYXFCc/Whats-App-Image-2025-01-27-at-19-32-15-6d7307fe.jpg"        ],
         "description": "A light used on ships to ensure visibility and safe navigation during low light or nighttime conditions."
+   
+    },
+    {
+        "id":15,
+        "name": " Boat propeller",
+        "images": [
+            "https://i.ibb.co.com/Hf5HPc6j/Whats-App-Image-2025-02-09-at-13-19-09-201a74f8.jpg"        ],
+        "description": "ABoat propeller."
     }
 ]

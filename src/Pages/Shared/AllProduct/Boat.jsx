@@ -1,97 +1,174 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+"use client";
+
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { motion } from "framer-motion";
+import { FaAnchor, FaShip, FaWater, FaCompass } from "react-icons/fa";
 
 const Boat = () => {
-    const { id } = useParams();  // Get the boat id from the URL
-    const [boat, setBoat] = useState(null);  // To hold the specific boat data
-    const [selectedImage, setSelectedImage] = useState('');  // To hold the currently selected main image
+  const { id } = useParams();
+  const [boat, setBoat] = useState(null);
+  const [selectedImage, setSelectedImage] = useState("");
 
-    useEffect(() => {
-        // Fetch boat data from boat.json
-        fetch('/boat.json')
-            .then((res) => res.json())
-            .then((data) => {
-                const boatData = data[id];  // Get specific boat by id
-                if (boatData) {
-                    setBoat(boatData);
-                    setSelectedImage(boatData.images[0]);  // Set initial main image to the first image
-                }
-            });
-    }, [id]);
+  useEffect(() => {
+    fetch("/boat.json")
+      .then((res) => res.json())
+      .then((data) => {
+        const boatData = data[id];
+        if (boatData) {
+          setBoat(boatData);
+          setSelectedImage(boatData.images[0]);
+        }
+      });
+  }, [id]);
 
-    if (!boat) {
-        return <div>Loading...</div>;
-    }
-
+  if (!boat) {
     return (
-        <div className="py-20 pt-40 max-w-screen-lg lg:mx-auto mx-4">
-            {/* Boat Details Section */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-                {/* Boat Images */}
-                <div>
-                    <img
-                        src={selectedImage}  // Display the selected image
-                        alt={boat.model}
-                        className="w-full h-[400px] object-cover rounded-lg shadow-lg mb-4"
-                    />
-                    <div className="flex space-x-4">
-                        {boat.images.map((img, index) => (
-                            <img
-                                key={index}
-                                src={img}
-                                alt={`Boat ${index}`}
-                                onClick={() => setSelectedImage(img)}  // Set clicked image as the main image
-                                className={`w-24 h-24 object-cover rounded-lg shadow-md cursor-pointer hover:scale-105 transition transform duration-300 ${
-                                    selectedImage === img ? 'border-2 border-blue-500' : ''
-                                }`}
-                            />
-                        ))}
-                    </div>
-                </div>
-
-                {/* Boat Information */}
-                <div>
-                    <h1 className="text-4xl font-bold mb-4">{boat.model}</h1>
-                    <p className="text-lg mb-4 text-gray-700"><strong>Size:</strong> {boat.size}</p>
-                    <p className="text-lg mb-4 text-gray-700"><strong>Engine:</strong> {boat.engine}</p>
-
-                    <h2 className="text-2xl font-semibold mt-6 mb-3">Key Features</h2>
-                    <ul className="list-disc list-inside text-gray-700 space-y-2">
-                        <li>Steering Wheel: {boat.features.steering_wheel}</li>
-                        <li>Fuel Tank: {boat.features.fuel_tank}</li>
-                        <li>Propeller: {boat.features.propeller}</li>
-                        <li>Sundeck: {boat.features.sundeck}</li>
-                        <li>Storage: {boat.features.storage_boxes.join(', ')}</li>
-                    </ul>
-
-                    {/* Pricing Information */}
-                    <div className="mt-6">
-                        <h2 className="text-2xl font-semibold mb-2">Pricing</h2>
-                        <p className="text-lg text-gray-700"><strong>6.5M: </strong>USD $ {boat.price["6.5M"]}</p>
-                        <p className="text-lg text-gray-700"><strong>7.5M: </strong>USD $ {boat.price["7.5M"]}</p>
-                        <p className="text-lg text-gray-700"><strong>8.0M: </strong>USD $ {boat.price["8.0M"]}</p>
-                    </div>
-                </div>
-            </div>
-
-            {/* Additional Details */}
-            <div className="mt-16">
-                <h2 className="text-3xl font-semibold mb-6">More Details</h2>
-                <p className="text-lg text-gray-700 mb-4">
-                    <strong>Finish:</strong> {boat.finish}
-                </p>
-                <p className="text-lg text-gray-700 mb-4">
-                    <strong>Lead Time:</strong> {boat.lead_time}
-                </p>
-                <p className="text-lg text-gray-700 mb-4">
-                    <strong>Payment Terms:</strong> {boat.payment_terms}
-                </p>
-                <p className="text-lg text-gray-700">
-                    <strong>Shipment:</strong> {boat.shipment}
-                </p>
-            </div>
-        </div>
+      <div className="flex items-center justify-center h-screen">
+        <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
+      </div>
     );
+  }
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <motion.h1
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-5xl font-extrabold text-gray-900 mb-10 text-center"
+        >
+          {boat.model}
+        </motion.h1>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Boat Images */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <div className="relative overflow-hidden rounded-lg shadow-xl mb-6 aspect-w-16 aspect-h-9">
+              <img
+                src={selectedImage || "/placeholder.svg"}
+                alt={boat.model}
+                className="object-cover w-full h-full transition-transform duration-500 hover:scale-110"
+              />
+            </div>
+            <div className="grid grid-cols-4 gap-4">
+              {boat.images.map((img, index) => (
+                <img
+                  key={index}
+                  src={img || "/placeholder.svg"}
+                  alt={`Boat ${index + 1}`}
+                  onClick={() => setSelectedImage(img)}
+                  className={`w-full h-24 object-cover rounded-lg shadow-md cursor-pointer transition-all duration-300 ${
+                    selectedImage === img
+                      ? "ring-4 ring-blue-500 scale-105"
+                      : "hover:scale-105"
+                  }`}
+                />
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Boat Information */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="bg-white rounded-xl shadow-2xl p-8"
+          >
+            <div className="flex items-center mb-6">
+              <FaShip className="w-8 h-8 text-blue-500 mr-3" />
+              <h2 className="text-3xl font-bold text-gray-800">
+                Specifications
+              </h2>
+            </div>
+            <div className="space-y-4 text-lg text-gray-600">
+              <p>
+                <span className="font-semibold">Size:</span> {boat.size}
+              </p>
+              <p>
+                <span className="font-semibold">Engine:</span> {boat.engine}
+              </p>
+            </div>
+
+            <div className="mt-10">
+              <div className="flex items-center mb-6">
+                <FaAnchor className="w-8 h-8 text-blue-500 mr-3" />
+                <h2 className="text-3xl font-bold text-gray-800">
+                  Key Features
+                </h2>
+              </div>
+              <ul className="space-y-3">
+                {Object.entries(boat.features).map(([key, value]) => (
+                  <li key={key} className="flex items-center text-gray-600">
+                    <FaCompass className="w-5 h-5 text-blue-500 mr-2" />
+                    <span className="capitalize">
+                      {key.replace("_", " ")}:
+                    </span>{" "}
+                    <span className="ml-2 font-medium">
+                      {Array.isArray(value) ? value.join(", ") : value}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="mt-10">
+              <div className="flex items-center mb-6">
+                <FaWater className="w-8 h-8 text-blue-500 mr-3" />
+                <h2 className="text-3xl font-bold text-gray-800">Pricing</h2>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                {Object.entries(boat.price).map(([size, price]) => (
+                  <div
+                    key={size}
+                    className="bg-blue-50 rounded-lg p-4 text-center transition-all duration-300 hover:shadow-md hover:bg-blue-100"
+                  >
+                    <p className="text-xl font-bold text-blue-800">{size}</p>
+                    <p className="text-2xl font-extrabold text-blue-600">
+                      ${Number(price).toLocaleString()}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Additional Details */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          className="mt-16 bg-white rounded-xl shadow-2xl p-8"
+        >
+          <div className="flex items-center mb-6">
+            <FaShip className="w-8 h-8 text-blue-500 mr-3" />
+            <h2 className="text-3xl font-bold text-gray-800">More Details</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-lg text-gray-600">
+            <p>
+              <span className="font-semibold">Finish:</span> {boat.finish}
+            </p>
+            <p>
+              <span className="font-semibold">Lead Time:</span> {boat.lead_time}
+            </p>
+            <p>
+              <span className="font-semibold">Payment Terms:</span>{" "}
+              {boat.payment_terms}
+            </p>
+            <p>
+              <span className="font-semibold">Shipment:</span> {boat.shipment}
+            </p>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
 };
 
 export default Boat;

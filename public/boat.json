@@ -144,7 +144,44 @@
         "shipment": "Within 5 days after receiving full payment",
         "images": [
             "https://i.ibb.co.com/hYhywbN/IMG-4750.jpg",
-            "https://api.believerssign.com/public/product/4Gwi1OfGt6-8NSUgWil.jpg"
+            "https://i.ibb.co.com/sgw52Yx/Whats-App-Image-2025-01-27-at-19-38-08-8a68e316.jpg"
+        ]
+    },
+    {
+        "model": "Open Life Boat",
+        "size": "10M",
+        "engine": "Volvo penta 2003, HP-28, Freshwater cooled, Electrical starting system",
+        "features": {
+            "reverse_gear": true,
+            "fuel_tank": "Diesel",
+            "propeller": "Polished",
+            "steering_wheel": "Stainless steel, Mono cable",
+            "rudder": "New stainless steel rudder with attachment points",
+            "seat_height": "Like as model boat",
+            "sundeck": "2.0M, Made by polyester, 10cm higher than seat level or as required",
+            "rear_deck": "1.0M, Made by polyester, 10cm lower than boat edge or as required",
+            "floor": "Removable wooden floor like as model boat",
+            "engine_box": "Made by polyester",
+            "wheel_stand": "Made by polyester",
+            "storage_boxes": [
+                "Under sundeck, Door inside opening",
+                "Under rear deck, Door top side opening",
+                "Under seat, For fuel tank, plus 6 additional boxes, top side opening"
+            ]
+        },
+        "finish": "Sanded and painted inside and outside as per buyer's instruction",
+        "lead_time": "65 days",
+        "price": {
+            "8.5M": "5000",
+            "9.5M": "6000",
+            "10.0M": "8000"
+        },
+        "payment_terms": "T/T Advance ,LC",
+        "shipment": "Within 5 days after receiving full payment",
+        "images": [
+            "https://i.ibb.co.com/1zBSMFs/Whats-App-Image-2025-01-27-at-19-38-06-f477bc7d.jpg",
+            "https://i.ibb.co.com/sgw52Yx/Whats-App-Image-2025-01-27-at-19-38-08-8a68e316.jpg",
+            "https://i.ibb.co.com/jknnzKTT/Whats-App-Image-2025-02-09-at-13-34-36-2eadb7a3.jpg"
         ]
     }
 ]
